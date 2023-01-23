@@ -5,21 +5,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Homeverse - Find your dream house</title>
-
-  <!-- 
-    - favicon
-  -->
+  <title>Patagonia Estate</title>
   <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
-
-  <!-- 
-    - custom css link
-  -->
   <link rel="stylesheet" href="./assets/css/style.css">
-
-  <!-- 
-    - google font link
-  -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -28,86 +16,21 @@
 </head>
 
 <body>
-
-  <!-- 
-    - #HEADER
-  -->
-
   <header class="header" data-header>
-
     <div class="overlay" data-overlay></div>
-
-    <div class="header-top">
-      <div class="container">
-
-        <ul class="header-top-list">
-
-          <li>
-            <a href="mailto:info@homeverse.com" class="header-top-link">
-              <ion-icon name="mail-outline"></ion-icon>
-
-              <span>info@homeverse.com</span>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" class="header-top-link">
-              <ion-icon name="location-outline"></ion-icon>
-
-              <address>15/A, Nest Tower, NYC</address>
-            </a>
-          </li>
-
-        </ul>
-
-        <div class="wrapper">
-          <ul class="header-top-social-list">
-
-            <li>
-              <a href="#" class="header-top-social-link">
-                <ion-icon name="logo-facebook"></ion-icon>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="header-top-social-link">
-                <ion-icon name="logo-twitter"></ion-icon>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="header-top-social-link">
-                <ion-icon name="logo-instagram"></ion-icon>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="header-top-social-link">
-                <ion-icon name="logo-pinterest"></ion-icon>
-              </a>
-            </li>
-
-          </ul>
-
-          <button class="header-top-btn">Add Listing</button>
-        </div>
-
-      </div>
-    </div>
-
     <div class="header-bottom">
       <div class="container">
 
         <a href="#" class="logo">
-          <img src="./assets/images/logo.png" alt="Homeverse logo">
+          <img src="./favicon.svg" alt="Patagonia logo">
         </a>
-
+        <h1 style="font-family: var(--ff-poppins);">Patagonia Estate</h1>
         <nav class="navbar" data-navbar>
 
           <div class="navbar-top">
 
             <a href="#" class="logo">
-              <img src="./assets/images/logo.png" alt="Homeverse logo">
+              <img src="./assets/images/logo.png" alt="Patagonia logo">
             </a>
 
             <button class="nav-close-btn" data-nav-close-btn aria-label="Close Menu">
@@ -149,25 +72,10 @@
         </nav>
 
         <div class="header-bottom-actions">
-
-          <button class="header-bottom-actions-btn" aria-label="Search">
-            <ion-icon name="search-outline"></ion-icon>
-
-            <span>Search</span>
-          </button>
-
-          <button class="header-bottom-actions-btn" aria-label="Profile">
+          <button class="header-bottom-actions-btn" id="clickButton" aria-label="Profile">
             <ion-icon name="person-outline"></ion-icon>
-
             <span>Profile</span>
           </button>
-
-          <button class="header-bottom-actions-btn" aria-label="Cart">
-            <ion-icon name="cart-outline"></ion-icon>
-
-            <span>Cart</span>
-          </button>
-
           <button class="header-bottom-actions-btn" data-nav-open-btn aria-label="Open Menu">
             <ion-icon name="menu-outline"></ion-icon>
 
@@ -180,18 +88,8 @@
     </div>
 
   </header>
-
-
-
-
-
   <main>
     <article>
-
-      <!-- 
-        - #HERO
-      -->
-
       <section class="hero" id="home">
         <div class="container">
 
@@ -206,7 +104,7 @@
             <h2 class="h1 hero-title">Find Your Dream House By Us</h2>
 
             <p class="hero-text">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.
+              Find the best house for yourself or for your family !
             </p>
 
             <button class="btn">Make An Enquiry</button>
@@ -219,14 +117,6 @@
 
         </div>
       </section>
-
-
-
-
-
-      <!-- 
-        - #ABOUT
-      -->
 
       <section class="about" id="about">
         <div class="container">
@@ -241,7 +131,7 @@
 
             <p class="section-subtitle">About Us</p>
 
-            <h2 class="h2 section-title">The Leading Real Estate Rental Marketplace.</h2>
+            <h2 class="h2 section-title">The Leading Real Estate Rental/Buying Marketplace.</h2>
 
             <p class="about-text">
               Over 39,000 people work for us in more than 70 countries all over the This breadth of global coverage,
@@ -286,8 +176,8 @@
             </ul>
 
             <p class="callout">
-              "Enimad minim veniam quis nostrud exercitation
-              llamco laboris. Lorem ipsum dolor sit amet"
+             "The best website to fulfill your needs related to the rent or buying of your neext
+             estate. Inquire with us and profit from our services and the best team of agents."
             </p>
 
             <a href="#service" class="btn">Our Services</a>
@@ -296,14 +186,6 @@
 
         </div>
       </section>
-
-
-
-
-
-      <!-- 
-        - #SERVICE
-      -->
 
       <section class="service" id="service">
         <div class="container">
@@ -330,7 +212,7 @@
                   to call home.
                 </p>
 
-                <a href="#" class="card-link">
+                <a href="#property" class="card-link">
                   <span>Find A Home</span>
 
                   <ion-icon name="arrow-forward-outline"></ion-icon>
@@ -355,7 +237,7 @@
                   to call home.
                 </p>
 
-                <a href="#" class="card-link">
+                <a href="#property" class="card-link">
                   <span>Find A Home</span>
 
                   <ion-icon name="arrow-forward-outline"></ion-icon>
@@ -380,7 +262,7 @@
                   to call home.
                 </p>
 
-                <a href="#" class="card-link">
+                <a href="#property" class="card-link">
                   <span>Find A Home</span>
 
                   <ion-icon name="arrow-forward-outline"></ion-icon>
@@ -393,14 +275,6 @@
 
         </div>
       </section>
-
-
-
-
-
-      <!-- 
-        - #PROPERTY
-      -->
 
       <section class="property" id="property">
         <div class="container">
@@ -887,15 +761,6 @@
 
         </div>
       </section>
-
-
-
-
-
-      <!-- 
-        - #FEATURES
-      -->
-
       <section class="features">
         <div class="container">
 
@@ -913,11 +778,6 @@
                 </div>
 
                 <h3 class="card-title">Parking Space</h3>
-
-                <div class="card-btn">
-                  <ion-icon name="arrow-forward-outline"></ion-icon>
-                </div>
-
               </a>
             </li>
 
@@ -930,9 +790,7 @@
 
                 <h3 class="card-title">Swimming Pool</h3>
 
-                <div class="card-btn">
-                  <ion-icon name="arrow-forward-outline"></ion-icon>
-                </div>
+
 
               </a>
             </li>
@@ -945,11 +803,6 @@
                 </div>
 
                 <h3 class="card-title">Private Security</h3>
-
-                <div class="card-btn">
-                  <ion-icon name="arrow-forward-outline"></ion-icon>
-                </div>
-
               </a>
             </li>
 
@@ -961,11 +814,6 @@
                 </div>
 
                 <h3 class="card-title">Medical Center</h3>
-
-                <div class="card-btn">
-                  <ion-icon name="arrow-forward-outline"></ion-icon>
-                </div>
-
               </a>
             </li>
 
@@ -977,11 +825,6 @@
                 </div>
 
                 <h3 class="card-title">Library Area</h3>
-
-                <div class="card-btn">
-                  <ion-icon name="arrow-forward-outline"></ion-icon>
-                </div>
-
               </a>
             </li>
 
@@ -993,11 +836,6 @@
                 </div>
 
                 <h3 class="card-title">King Size Beds</h3>
-
-                <div class="card-btn">
-                  <ion-icon name="arrow-forward-outline"></ion-icon>
-                </div>
-
               </a>
             </li>
 
@@ -1009,11 +847,6 @@
                 </div>
 
                 <h3 class="card-title">Smart Homes</h3>
-
-                <div class="card-btn">
-                  <ion-icon name="arrow-forward-outline"></ion-icon>
-                </div>
-
               </a>
             </li>
 
@@ -1025,27 +858,12 @@
                 </div>
 
                 <h3 class="card-title">Kid’s Playland</h3>
-
-                <div class="card-btn">
-                  <ion-icon name="arrow-forward-outline"></ion-icon>
-                </div>
-
               </a>
             </li>
 
           </ul>
-
         </div>
       </section>
-
-
-
-
-
-      <!-- 
-        - #BLOG
-      -->
-
       <section class="blog" id="blog">
         <div class="container">
 
@@ -1216,246 +1034,10 @@
 
         </div>
       </section>
-
-
-
-
-
-      <!-- 
-        - #CTA
-      -->
-
-      <section class="cta">
-        <div class="container">
-
-          <div class="cta-card">
-            <div class="card-content">
-              <h2 class="h2 card-title">Looking for a dream home?</h2>
-
-              <p class="card-text">We can help you realize your dream of a new home</p>
-            </div>
-
-            <button class="btn cta-btn">
-              <span>Explore Properties</span>
-
-              <ion-icon name="arrow-forward-outline"></ion-icon>
-            </button>
-          </div>
-
-        </div>
-      </section>
-
-    </article>
+    </article> 
   </main>
-
-
-
-
-
-  <!-- 
-    - #FOOTER
-  -->
-
-  <footer class="footer">
-
-    <div class="footer-top">
-      <div class="container">
-
-        <div class="footer-brand">
-
-          <a href="#" class="logo">
-            <img src="./assets/images/logo-light.png" alt="Homeverse logo">
-          </a>
-
-          <p class="section-text">
-            Lorem Ipsum is simply dummy text of the and typesetting industry. Lorem Ipsum is dummy text of the printing.
-          </p>
-
-          <ul class="contact-list">
-
-            <li>
-              <a href="#" class="contact-link">
-                <ion-icon name="location-outline"></ion-icon>
-
-                <address>Brooklyn, New York, United States</address>
-              </a>
-            </li>
-
-            <li>
-              <a href="tel:+0123456789" class="contact-link">
-                <ion-icon name="call-outline"></ion-icon>
-
-                <span>+0123-456789</span>
-              </a>
-            </li>
-
-            <li>
-              <a href="mailto:contact@homeverse.com" class="contact-link">
-                <ion-icon name="mail-outline"></ion-icon>
-
-                <span>contact@homeverse.com</span>
-              </a>
-            </li>
-
-          </ul>
-
-          <ul class="social-list">
-
-            <li>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-facebook"></ion-icon>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-twitter"></ion-icon>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-linkedin"></ion-icon>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-youtube"></ion-icon>
-              </a>
-            </li>
-
-          </ul>
-
-        </div>
-
-        <div class="footer-link-box">
-
-          <ul class="footer-list">
-
-            <li>
-              <p class="footer-list-title">Company</p>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link">About</a>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link">Blog</a>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link">All Products</a>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link">Locations Map</a>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link">FAQ</a>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link">Contact us</a>
-            </li>
-
-          </ul>
-
-          <ul class="footer-list">
-
-            <li>
-              <p class="footer-list-title">Services</p>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link">Order tracking</a>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link">Wish List</a>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link">Login</a>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link">My account</a>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link">Terms & Conditions</a>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link">Promotional Offers</a>
-            </li>
-
-          </ul>
-
-          <ul class="footer-list">
-
-            <li>
-              <p class="footer-list-title">Customer Care</p>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link">Login</a>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link">My account</a>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link">Wish List</a>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link">Order tracking</a>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link">FAQ</a>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link">Contact us</a>
-            </li>
-
-          </ul>
-
-        </div>
-
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <div class="container">
-
-        <p class="copyright">
-          &copy; 2022 <a href="#">codewithsadee</a>. All Rights Reserved
-        </p>
-
-      </div>
-    </div>
-
-  </footer>
-
-
-
-
-
-  <!-- 
-    - custom js link
-  -->
   <script src="./assets/js/script.js"></script>
 
-  <!-- 
-    - ionicon link
-  -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 

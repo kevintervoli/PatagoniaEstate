@@ -49,3 +49,10 @@ window.addEventListener("scroll", function () {
   window.scrollY >= 400 ? header.classList.add("active")
     : header.classList.remove("active");
 }); 
+
+
+const loginButton = document.querySelector("#clickButton");
+// aler when clicking the button
+loginButton.addEventListener("click", function () {
+  window.location.href = "./view-php/login.php";
+});
