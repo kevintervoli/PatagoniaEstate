@@ -75,3 +75,7 @@ INSERT INTO Agent_Area (Agent_ID, Area_Id) VALUES (3,1);
 INSERT INTO Agent_Area (Agent_ID, Area_Id) VALUES (3,2);
 -- insert into property table
 INSERT INTO Property (Property_Name, Description, Nr_Bedrooms, Nr_Bathrooms, Area, Image, Agent_ID, Area_Id,Price) VALUES ('House1', 'House in Gramsh', 2, 1, 100, './assets/images/logo.png', 1, 1,1250120);
+INSERT INTO Property (Property_Name, Description, Nr_Bedrooms, Nr_Bathrooms, Area, Image, Agent_ID, Area_Id,Price) VALUES ('Comfortable House', 'Beautiful house in Tirana', 2, 1, 100, './assets/images/property-1.jpg', 1, 1,12506);
+INSERT INTO Property (Property_Name, Description, Nr_Bedrooms, Nr_Bathrooms, Area, Image, Agent_ID, Area_Id,Price) VALUES ('New House', 'Astonishing house in Durres', 2, 1, 100, './assets/images/property-2.jpg', 1, 1,34550);
+INSERT INTO Property (Property_Name, Description, Nr_Bedrooms, Nr_Bathrooms, Area, Image, Agent_ID, Area_Id,Price) VALUES ('Okazion', 'Cheap house for your family ', 2, 1, 100, './assets/images/property-3.jpg', 1, 1,26410);
+INSERT INTO Property (Property_Name, Description, Nr_Bedrooms, Nr_Bathrooms, Area, Image, Agent_ID, Area_Id,Price) VALUES ('OMG', 'Buy this house now', 2, 1, 100, './assets/images/property-4.jpg', 1, 1,26410);
