@@ -45,10 +45,11 @@ CREATE TABLE Property
   Description varchar(256) NOT NULL,
   Nr_Bedrooms INT NOT NULL,
   Nr_Bathrooms INT NOT NULL,
-  Area  NOT NULL,
+  Area  varchar(256) NOT NULL,
   Image BLOB NOT NULL,
   Agent_ID INT NOT NULL,
   Area_Id INT NOT NULL,
+  Price INT NOT NULL,
   PRIMARY KEY (Property_Id),
   FOREIGN KEY (Agent_ID) REFERENCES Agent(Agent_ID),
   FOREIGN KEY (Area_Id) REFERENCES Area(Area_Id)
