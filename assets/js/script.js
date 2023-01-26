@@ -56,3 +56,9 @@ const loginButton = document.querySelector("#clickButton");
 loginButton.addEventListener("click", function () {
   window.location.href = "./view-php/login.php";
 });
+
+
+const buyButton = document.getElementById('buy-btn');
+buyButton.addEventListener('click',function(){
+  console.log("Buy button is clicked");
+});

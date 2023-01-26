@@ -116,12 +116,12 @@
               <button class="card-footer-actions-btn">
                 <ion-icon name="add-circle-outline"></ion-icon>
               </button>
-
+              <form method="post" action="./view-php/login.php">
             </div>
-
+            <button class="btn btn-primary btn-block">Buy</button>
           </div>
+          </form>
 
         </div>
       </li>';
     }
-?>

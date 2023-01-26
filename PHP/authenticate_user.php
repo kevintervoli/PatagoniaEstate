@@ -23,7 +23,6 @@ if ($result->num_rows > 0) {
             if($row['admin']){
                 header('Location: ../admin.php');
             }
-
         } else {
             echo "Login failed";
         }
