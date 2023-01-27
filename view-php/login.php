@@ -46,8 +46,9 @@ if(isset($_SESSION['username'])){
 
 <?php
 //database connection
-include '../PHP/authenticate_user.php';
-include '../PHP/connect_to_database.php';
+// include '../PHP/authenticate_user.php';
+// include '../PHP/connect_to_database.php';
+include '../PHP/PDO_conn.php';
 ?>
 </body>
 </html>
