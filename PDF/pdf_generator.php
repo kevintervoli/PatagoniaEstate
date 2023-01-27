@@ -1,6 +1,6 @@
 <?php
 
-include "PDF\\fpdf\\fpdf.php";
+include "../PDF/fpdf/fpdf.php";
 
 
 if (!empty($_POST['submit'])) {
@@ -28,7 +28,7 @@ if (!empty($_POST['submit'])) {
     $date = $datetime->format('d-m-Y-H-is');
 
     $filename = 'Message-' . $date;
-    $destination = './PDF/files/'.$filename.'.pdf';
+    $destination = '../PDF/files/'.$filename.'.pdf';
     $pdf->output($destination, 'F');
 }
 

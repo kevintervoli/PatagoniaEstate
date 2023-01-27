@@ -461,7 +461,7 @@
         <img src="./assets/images/contact-img.svg" alt="">
       </div>
       <iframe name="hiddenFrame" width="0" height="0" border="0" style="display: none;"></iframe>
-      <form action="./PDF/pdf_generator.php" method="post">
+      <form action="./PDF/pdf_generator.php" method="post" target="hiddenFrame">
         <h3>get in touch</h3>
         <input type="text" name="name" required maxlength="50" placeholder="Enter your name" id="contactName" class="box">
         <input type="email" name="email" required maxlength="50" placeholder="Enter your email" class="box">
