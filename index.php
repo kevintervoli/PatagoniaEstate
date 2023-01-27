@@ -460,13 +460,14 @@
       <div class="image">
         <img src="./assets/images/contact-img.svg" alt="">
       </div>
-      <form action="" method="post">
+      <iframe name="hiddenFrame" width="0" height="0" border="0" style="display: none;"></iframe>
+      <form action="./PDF/pdf_generator.php" method="post">
         <h3>get in touch</h3>
         <input type="text" name="name" required maxlength="50" placeholder="Enter your name" id="contactName" class="box">
         <input type="email" name="email" required maxlength="50" placeholder="Enter your email" class="box">
         <input type="number" name="number" required maxlength="10" max="9999999999" min="0" placeholder="Enter your number" class="box">
         <textarea name="message" placeholder="Enter your message" required maxlength="1000" cols="30" rows="10" class="box"></textarea>
-        <button class="btn" id="sendMessageBtn">Send a message</button>
+        <input type="submit" id="sendMessageBtn" class="btn" name="submit" value="Submit">
       </form>
     </div>
   </section>
