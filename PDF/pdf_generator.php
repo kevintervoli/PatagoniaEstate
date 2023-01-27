@@ -1,10 +1,9 @@
 <?php
 
-require_once "./PDF/fpdf/fpdf.php";
+include "PDF\\fpdf\\fpdf.php";
 
 
 if (!empty($_POST['submit'])) {
-
 
     $name = $_POST['name'];
     $email = $_POST['email'];
@@ -29,7 +28,7 @@ if (!empty($_POST['submit'])) {
     $date = $datetime->format('d-m-Y-H-is');
 
     $filename = 'Message-' . $date;
-    $destination = './PDFfiles/'.$filename.'.pdf';
+    $destination = './PDF/files/'.$filename.'.pdf';
     $pdf->output($destination, 'F');
 }
 
