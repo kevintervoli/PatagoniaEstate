@@ -7,7 +7,7 @@ $dbpass = "";
 error_reporting(E_ALL ^ E_WARNING);
 
 try{
-    $pdo = new PDO("mysql:host=127.0.0.1:3307;dbname=$dbname", $dbuser, $dbpass);
+    $pdo = new PDO("mysql:host=127.0.0.1:3306;dbname=$dbname", $dbuser, $dbpass);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     echo "Connected Successfully";
 
@@ -19,7 +19,7 @@ try{
         $password = $_POST['password'];
     }
 
-    $stmt = $pdo->prepare("select * from user where username=:username and Password=:pass;");
+    $stmt = $pdo->prepare("select * from users where username=:username and Password=:pass;");
     $stmt->execute(
         [':username'=>$username, ':pass'=>$password]
     );

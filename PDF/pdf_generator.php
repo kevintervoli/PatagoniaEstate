@@ -21,15 +21,22 @@ if (!empty($_POST['submit'])) {
     $pdf->Ln();
     $pdf->Cell(40,10,'Email: '.$email);
     $pdf->Ln();
+    $pdf->Cell(40,10,'Number: '.$number);
+    $pdf->Ln();
+    $pdf->Cell(40,10,'Message: '.$message);
+    $pdf->Ln();
     $pdf->Cell(40,10,'Date: '.date('d-m-Y'));
     $pdf->Ln();
 
     $datetime = new DateTime();
     $date = $datetime->format('d-m-Y-H-is');
-
+    
+    header('Location: ../index.php');
     $filename = 'Message-' . $date;
     $destination = '../PDF/files/'.$filename.'.pdf';
     $pdf->output($destination, 'F');
+    
+    // refresh the page
 }
 
 
