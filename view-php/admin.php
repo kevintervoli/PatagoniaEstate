@@ -1,10 +1,10 @@
-<?php
-session_start();
-if(!isset($_SESSION['username'])){
-    header('Location: ./view-php/login.php');
-}
-?>
-<!DOCTYPE html>
+<!-- <?php
+// session_start();
+// if(!isset($_SESSION['username'])){
+//     header('Location: ./view-php/login.php');
+// }
+?> -->
+<!DOCTYPE html>sess
 <html lang="en">
 
 <head>
