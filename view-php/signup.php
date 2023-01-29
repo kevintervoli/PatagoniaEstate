@@ -25,7 +25,7 @@
                 <label>Surname</label>
             </div>
             <div class="txt_field">
-                <input type="text" name="email" required>
+                <input type="text" name="email" required pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$">
                 <span></span>
                 <label>Email</label>
             </div>
@@ -41,7 +41,7 @@
             </div>
 
             <div class="txt_field">
-                <input type="password" name="password" required>
+                <input type="password" name="password" required pattern = "^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$">
                 <span></span>
                 <label>Password</label>
             </div>

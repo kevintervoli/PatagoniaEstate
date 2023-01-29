@@ -19,20 +19,20 @@
         <br>
         <input class="btn btn-primary btn-sm" type="submit" name="button" value="FILL TABLE" />
         <input class="btn btn-primary btn-sm" type="submit" name="add" value="ADD" />
-        <input type="text" name="id" placeholder="ID" />
+        <input type="text" name="id" placeholder="ID"/>
         <input type="text" name="username" placeholder="USERNAME" />
         <input class='btn btn-danger btn-sm' type='submit' name='delete' value='Delete' />
         <br>
         <br>
         <input type="number" name="id" placeholder="ID" />
-        <input type="text" name="name" placeholder="Name" />
+        <input type="text" name="name" placeholder="Name"/>
         <input type="text" name="surname" placeholder="Surname" />
         <input type="number" name="age" placeholder="Age"/>
-        <input type="text" name="email" placeholder="Email" />
+        <input type="text" name="email" placeholder="Email" pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"/>
         <input type="text" name="address" placeholder="Address" />
         <input type="text" name="username" placeholder="Username" />
-        <input type="text" name="password" placeholder="Password" />
-        <input type="number" name="status" placeholder="Status" />
+        <input type="text" name="password" placeholder="Password"/>
+        <input type="number" name="status" placeholder="Status"pattern = "^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"/>
         <input class='btn btn-primary btn-sm' type='submit' name='ediit' value='EDIT' />
         <br>
         <br>

@@ -12,49 +12,49 @@
         <div class="row mb-1">
             <label for="name" class="col-sm-1 col-form-label">Name</label>
             <div class="col-sm-6">
-                <input type="text" class="form-control" id="name" name="name" placeholder="Name">
+                <input type="text" class="form-control" id="name" name="name" placeholder="Name" required>
             </div>
         </div>
         <div class="row mb-3">
             <label for="surname" class="col-sm-1 col-form-label">Surname</label>
             <div class="col-sm-6">
-                <input type="text" class="form-control" id="surname" name="surname" placeholder="Surname">
+                <input type="text" class="form-control" id="surname" name="surname" placeholder="Surname" required>
             </div>
         </div>
         <div class="row mb-3">
             <label for="age" class="col-sm-1 col-form-label">Age</label>
             <div class="col-sm-6">
-                <input type="number" class="form-control" id="age" name="age" placeholder="Age">
+                <input type="number" class="form-control" id="age" name="age" placeholder="Age" required>
             </div>
         </div>
         <div class="row mb-3">
             <label for="email" class="col-sm-1 col-form-label">Email</label>
             <div class="col-sm-6">
-                <input type="text" class="form-control" id="email" name="email" placeholder="Email">
+                <input type="text" class="form-control" id="email" name="email" placeholder="Email" required pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$">
             </div>
         </div>
         <div class="row mb-3">
             <label for="address" class="col-sm-1 col-form-label">Address</label>
             <div class="col-sm-6">
-                <input type="text" class="form-control" id="address" name="address" placeholder="Address">
+                <input type="text" class="form-control" id="address" name="address" placeholder="Address" required >
             </div>
         </div>
         <div class="row mb-3">
             <label for="username" class="col-sm-1 col-form-label">Username</label>
             <div class="col-sm-6">
-                <input type="text" class="form-control" id="username" name="username" placeholder="Username">
+                <input type="text" class="form-control" id="username" name="username" placeholder="Username" required>
             </div>
         </div>
         <div class="row mb-3">
             <label for="password" class="col-sm-1 col-form-label">Password</label>
             <div class="col-sm-6">
-                <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+                <input type="password" class="form-control" id="password" name="password" placeholder="Password" required pattern = "^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$">
             </div>
         </div>
         <div class="row mb-3">
             <label for="confirm_password" class="col-sm-1 col-form-label">User Status</label>
             <div class="col-sm-6">
-                <input type="password" class="form-control" id="status" name="status" placeholder="User Status">
+                <input type="password" class="form-control" id="status" name="status" placeholder="User Status" required>
             </div>
         </div>
         <div class="row mb-3">
@@ -79,8 +79,6 @@
             $confirm_password = $_POST['confirm_password'];
             $status = $_POST['status'];
             $db->insert($name, $surname, $age, $email, $address, $username, $password, $status);
-
-
         }
     ?>
 

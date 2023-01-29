@@ -4,7 +4,6 @@ $dbhost = "localhost";
 $dbname = "real_estate";
 $dbuser = "root";
 $dbpass = "";
-error_reporting(E_ALL ^ E_WARNING);
 
 try{
     $pdo = new PDO("mysql:host=127.0.0.1:3306;dbname=$dbname", $dbuser, $dbpass);
@@ -29,7 +28,7 @@ try{
     }
 
 }catch(PDOException $e){
-    // echo "Connection failed: " . $e->getMessage();
+    echo "Connection failed: " . $e->getMessage();
 }
 
 
