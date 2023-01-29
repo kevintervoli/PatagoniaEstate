@@ -22,14 +22,9 @@
         <input type="text" name="id" placeholder="ID" />
         <input type="text" name="username" placeholder="USERNAME" />
         <input class='btn btn-danger btn-sm' type='submit' name='delete' value='Delete' />
-        <!-- <input class='btn btn-primary btn-sm' type='submit' name='EDIT' value='EDIT' />   -->
-        <!-- <br>
-        <br>
-        <input type="text" name="searchId" placeholder="ID" />
-        <input type="text" name="searchUserName" placeholder="Username" />
-        <input type="submit" name="searchButton" value="Search" />
         <br>
         <br>
+        <input type="number" name="id" placeholder="ID" />
         <input type="text" name="name" placeholder="Name" />
         <input type="text" name="surname" placeholder="Surname" />
         <input type="number" name="age" placeholder="Age"/>
@@ -38,14 +33,9 @@
         <input type="text" name="username" placeholder="Username" />
         <input type="text" name="password" placeholder="Password" />
         <input type="number" name="status" placeholder="Status" />
-
+        <input class='btn btn-primary btn-sm' type='submit' name='ediit' value='EDIT' />
         <br>
         <br>
-        <input type="text" name="searchId" placeholder="SearchId" />
-        <input type="text" name="old" placeholder="Old value" />
-        <input type="text" name="new" placeholder="New value" />
-        <input type="submit" name="update" value="Update" />
-         -->
     </form>
     <section>
         <table class="table">
@@ -83,10 +73,32 @@
                 // delete
                 if (isset($_POST['delete'])) {
                     $id = $_POST['id'];
-                    $db->delete($id);
+                    $username = $_POST['username'];
+                    $db->delete($id, $username);
                     $result = $db->select();
                     fillTable($result);
                 }
+                // edit
+                if (isset($_POST['edit'])) {
+                    $id = $_POST['id'];
+                    $name = $_POST['name'];
+                    $surname = $_POST['surname'];
+                    $age = $_POST['age'];
+                    $email = $_POST['email'];
+                    $address = $_POST['address'];
+                    $username = $_POST['username'];
+                    $password = $_POST['password'];
+                    $status = $_POST['status'];
+                    $db->update($id, $name, $surname, $age, $email, $address, $username, $password, $status);
+                    $result = $db->select();
+                    fillTable($result);
+                }
+                // add
+                if (isset($_POST['add'])) {
+                    // open another page in another window
+                    echo "<script>window.open('./add_user.php', '_blank');</script>";
+                }
+                
 
             ?>
         </table>
