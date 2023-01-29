@@ -30,6 +30,11 @@
                 <label>Email</label>
             </div>
             <div class="txt_field">
+                <input type="number" name="age" required >
+                <span></span>
+                <label>Age</label>
+            </div>
+            <div class="txt_field">
                 <input type="text" name="address" required>
                 <span></span>
                 <label>Address</label>
@@ -48,51 +53,18 @@
 
             <input type="submit" value="Sign Up">
             <?php
-            include '../PHP/connect_to_database.php';
-            $name = '';
-            $surname = '';
-            $email = '';
-            $address = '';
-            $username = '';
-            $password = '';
-
-            if (isset($_POST['name'])) {
+            require_once '../PHP/rest_api.php';
+            $db = new Database();     
+            if (isset($_POST['name']) && isset($_POST['surname']) && isset($_POST['email']) && isset($_POST['address']) && isset($_POST['username']) && isset($_POST['password'])) {
                 $name = $_POST['name'];
-            }
-            if (isset($_POST['surname'])) {
                 $surname = $_POST['surname'];
-            }
-
-            if (isset($_POST['email'])) {
                 $email = $_POST['email'];
-            }
-
-            if (isset($_POST['address'])) {
                 $address = $_POST['address'];
-            }
-
-            if (isset($_POST['username'])) {
                 $username = $_POST['username'];
-            }
-
-            if (isset($_POST['password'])) {
                 $password = $_POST['password'];
+                $age = $_POST['age'];
+                $db->insert($name, $surname,$age, $email, $address, $username, $password,1);
             }
-            $sql1 = "SELECT * FROM users WHERE username = '$username' AND email = '$email'";
-            $result = $conn->query($sql1);
-            if ($result->num_rows > 0) {
-                while ($row = $result->fetch_assoc()) {
-                    if ($row['email'] == $email) {
-                        echo '<script>alert("Email already registered !")</script>';
-                    } else if ($row['username'] == $username) {
-                        echo '<script>alert("Username already exists !")</script>';
-                    } else {
-                        $sql = "INSERT INTO users (name, surname, email, address, username, pass) VALUES ('$name', '$surname', '$email', '$address', '$username', '$password')";
-                        $conn->query($sql);
-                    }
-                }
-            }
-            $conn->close();
             ?>
 
             <div class="signup_link">

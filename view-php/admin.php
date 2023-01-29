@@ -15,7 +15,7 @@
     ?>
     <form method="post">
         <h1>User Table</h1>
-        Click here to <a href="./PHP/logout.php">Logout</a>
+        Click here to <a href="../PHP/logout.php">Logout</a>
         <br>
         <input class="btn btn-primary btn-sm" type="submit" name="button" value="FILL TABLE" />
         <input class="btn btn-primary btn-sm" type="submit" name="add" value="ADD" />

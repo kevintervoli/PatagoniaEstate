@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <h1>Client Page</h1>
+    Click here to <a href="../PHP/logout.php">Logout</a>
 </body>
 </html>

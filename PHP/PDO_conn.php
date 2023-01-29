@@ -21,9 +21,13 @@ try{
     );
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
     if(!is_null($row['Status']) && $row['Status']==0){
+        session_start();
+        $_SESSION['username'] = $username;
         header("Location: ../view-php/admin.php");
     }
     else if(!is_null($row['Status']) && ($row['Status']==1 || $row['Status']==2)){
+        session_start();
+        $_SESSION['username'] = $username;
         header("Location: ../view-php/client.php");
     }
 
