@@ -56,13 +56,41 @@
             require_once '../PHP/rest_api.php';
             $db = new Database();     
             if (isset($_POST['name']) && isset($_POST['surname']) && isset($_POST['email']) && isset($_POST['address']) && isset($_POST['username']) && isset($_POST['password'])) {
-                $name = $_POST['name'];
-                $surname = $_POST['surname'];
-                $email = $_POST['email'];
-                $address = $_POST['address'];
-                $username = $_POST['username'];
-                $password = $_POST['password'];
-                $age = $_POST['age'];
+                $name_temp = $_POST['name'];
+                $name=filter_var($name_temp, FILTER_SANITIZE_STRING);
+
+                $surname_temp = $_POST['surname'];
+                $surname=filter_var($surname_temp, FILTER_SANITIZE_STRING);
+
+                $email_temp = $_POST['email'];
+                $email=filter_var($email_temp, FILTER_SANITIZE_EMAIL);
+
+                if(!filter_var($email, FILTER_VALIDATE_EMAIL)===false)
+                {
+                    echo '<script type=text/javascript>';
+                    echo 'alert("Email not valid")';
+                    echo '</script>';
+                    
+                }
+
+                $address_temp = trim($_POST['address']);
+                $address=filter_var($address_temp, FILTER_SANITIZE_STRING);
+
+                $username_temp = trim($_POST['username']);
+                $username=filter_var($username_temp, FILTER_SANITIZE_STRING);
+
+                $password_temp = $_POST['password'];
+                $password=filter_var($password_temp, FILTER_SANITIZE_STRING);
+
+                $age_temp = $_POST['age'];
+                $age=filter_var($age_temp, FILTER_SANITIZE_STRING);
+                if(!filter_var($age, FILTER_VALIDATE_INT)===0)
+                {
+                    echo '<script type=text/javascript>';
+                    echo 'alert("Age not valid")';
+                    echo '</script>';
+                }
+
                 $db->insert($name, $surname,$age, $email, $address, $username, $password,1);
             }
             ?>

@@ -12,8 +12,11 @@ try{
     $password = null;
     if(isset($_POST))
     {
-        $username = $_POST['username'];
-        $password = $_POST['password'];
+        $username_temp = $_POST['username'];
+        $password_temp = $_POST['password'];
+
+        $username=filter_var($username_temp, FILTER_SANITIZE_STRING);
+        $password=filter_var($password_temp, FILTER_SANITIZE_STRING);
     }
     $stmt = $pdo->prepare("select * from users where username=:username and Password=:pass;");
     $stmt->execute(
@@ -26,6 +29,7 @@ try{
         header("Location: ../view-php/admin.php");
     }
     else if(!is_null($row['Status']) && ($row['Status']==1 || $row['Status']==2)){
+        
         session_start();
         $_SESSION['username'] = $username;
         header("Location: ../view-php/client.php");
