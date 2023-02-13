@@ -5,7 +5,7 @@ if(isset($_SESSION['username'])){
     header('Location: ./admin.php');
 }
 
-error_reporting(E_ALL ^ E_WARNING);
+error_reporting(0)
 ?>
 
 <!DOCTYPE html>
