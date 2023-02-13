@@ -46,7 +46,6 @@ function fillTable(tableElement, data) {
 
 document.querySelector("#userForm").addEventListener("submit", (event) => {
   event.preventDefault();
-  // get the button name from event
   const buttonName = event.submitter.name;
   if (buttonName === "fillButton") {
     const formData = new FormData(event.target);
@@ -61,5 +60,8 @@ document.querySelector("#userForm").addEventListener("submit", (event) => {
     deletePropertyAPI(data).then((data) => {
       console.log(data);
     });
+  }
+  else if (buttonName === "add"){
+    window.location.href = "./add_user.php";
   }
 });

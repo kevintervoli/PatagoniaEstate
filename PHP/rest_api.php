@@ -42,6 +42,7 @@
         return;
     }
     public function insert($name,$surname,$age,$email,$address,$username, $password, $status){
+        $password = password_hash($password, PASSWORD_BCRYPT);
         $stmt = $this->connection->prepare("insert into users (name,surname,age,email,address,username, password, status) values (:name,:surname,:age,:email,:address,:username, :password, :status)");
         $stmt->execute(
             [':name'=>$name,':surname'=>$surname,':age'=>$age,':email'=>$email,':address'=>$address,':username'=>$username, ':password'=>$password, ':status'=>$status]

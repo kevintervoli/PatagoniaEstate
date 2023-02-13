@@ -13,7 +13,7 @@
     require_once '../PHP/rest_api.php';
     $db = new Database();
     ?>
-    <form id="userForm">
+    <form id="userForm" method="GET" action=".">
         <h1>User Table</h1>
         Click here to <a href="../PHP/logout.php">Logout</a>
         <br>
@@ -24,22 +24,23 @@
         <input class='btn btn-danger btn-sm' type='submit' name='deleteButton' value='Delete' />
         <br>
         <br>
-        <input type="number" name="id" placeholder="ID" />
-        <input type="text" name="name" placeholder="Name"/>
+    </form>
+    <form id="part2" method="POST">
+        <input type="number"  name="id_2" placeholder="ID" />
+        <input type="text"  name="name" placeholder="Name"/>
         <input type="text" name="surname" placeholder="Surname" />
         <input type="number" name="age" placeholder="Age"/>
         <input type="text" name="email" placeholder="Email" pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"/>
         <input type="text" name="address" placeholder="Address" />
-        <input type="text" name="username" placeholder="Username" />
+        <input type="text" name="username_2" placeholder="Username" />
         <input type="text" name="password" placeholder="Password"/>
         <input type="number" name="status" placeholder="Status"pattern = "^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"/>
-        <input class='btn btn-primary btn-sm' type='submit' name='ediit' value='EDIT' />
+        <input class='btn btn-primary btn-sm' type='submit' name='edit' value='EDIT' />
         <br>
         <br>
     </form>
     <section>
         <table class="table">
-
             <tr>
                 <th>ID</th>
                 <th>First Name</th>
@@ -52,50 +53,19 @@
                 <th>Status</th>
             </tr>
             <?php
-                function fillTable($result1)
-                {
-                $i = 0;
-                    foreach ($result1 as $rows) {
-                        $i++;
-                        echo "<tr><td>" . $rows["ID"] . "</td><td>" . $rows["Name"] . "</td><td>" . $rows["Surname"] . "</td><td>" . $rows["Age"] . "</td><td>" . $rows["Email"] . "</td><td>" . $rows["Address"] . "</td><td>" . $rows["username"] . "</td><td>" . $rows["Password"] . "</td><td>" . $rows["Status"];
-                    }
+                if (isset($_POST['edit'])) {
+                    $id = $_POST['id_2'];
+                    $name = $_POST['name'];
+                    $surname = $_POST['surname'];
+                    $age = $_POST['age'];
+                    $email = $_POST['email'];
+                    $address = $_POST['address'];
+                    $username = $_POST['username_2'];
+                    $password = $_POST['password'];
+                    $status = $_POST['status'];
+                    $password = password_hash($password, PASSWORD_DEFAULT);
+                    $db->update($id, $name, $surname, $age, $email, $address, $username, $password, $status);
                 }
-                // if (isset($_POST['searchButton'])) {
-                //     $searchId = $_POST['searchId'];
-                //     $searchUserName = $_POST['searchUserName'];
-                //     $result = $db->search($searchId, $searchUserName);
-                //     fillTable($result);
-                // }
-                // // delete
-                // if (isset($_POST['delete'])) {
-                //     $id = $_POST['id'];
-                //     $username = $_POST['username'];
-                //     $db->delete($id, $username);
-                //     $result = $db->select();
-                //     fillTable($result);
-                // }
-                // // edit
-                // if (isset($_POST['edit'])) {
-                //     $id = $_POST['id'];
-                //     $name = $_POST['name'];
-                //     $surname = $_POST['surname'];
-                //     $age = $_POST['age'];
-                //     $email = $_POST['email'];
-                //     $address = $_POST['address'];
-                //     $username = $_POST['username'];
-                //     $password = $_POST['password'];
-                //     $status = $_POST['status'];
-                //     $db->update($id, $name, $surname, $age, $email, $address, $username, $password, $status);
-                //     $result = $db->select();
-                //     fillTable($result);
-                // }
-                // // add
-                // if (isset($_POST['add'])) {
-                //     // open another page in another window
-                //     echo "<script>window.open('./add_user.php', '_blank');</script>";
-                // }
-                
-
             ?>
         </table>
     </section>
