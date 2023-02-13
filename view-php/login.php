@@ -4,6 +4,8 @@ session_start();
 if(isset($_SESSION['username'])){
     header('Location: ./admin.php');
 }
+
+error_reporting(E_ALL ^ E_WARNING);
 ?>
 
 <!DOCTYPE html>
