@@ -19,6 +19,7 @@ try{
         $password=filter_var($password_temp, FILTER_SANITIZE_STRING);
     }
     $stmt = $pdo->prepare("select * from users where username=:username and Password=:pass;");
+    $password = password_hash($password, PASSWORD_BCRYPT);
     $stmt->execute(
         [':username'=>$username, ':pass'=>$password]
     );
