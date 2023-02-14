@@ -1,9 +1,7 @@
 <?php
     include './PHP/connect_to_database.php';
-    // select the property with area union with area table
     $sql = "SELECT * FROM property INNER JOIN area ON property.Area_Id = area.Area_Id";
     $result  = $conn->query($sql);
-    // print the image where the path is in result
     while ($row = $result->fetch_assoc()) {
         echo ' 
         <li>
