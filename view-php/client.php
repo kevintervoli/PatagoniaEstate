@@ -9,9 +9,11 @@
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
+    <div class="center_div">
     <h1>Client Page</h1>
     Click here to <a href="../PHP/logout.php">Logout</a>
     <a  class='btn btn-primary btn-sm' href="../index.php">GO HOME</a>
+    </div>
     <div class="gallery">
     <?php include '../PHP/loadClient.php';?>
     </div>

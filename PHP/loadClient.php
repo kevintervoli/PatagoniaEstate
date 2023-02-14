@@ -7,7 +7,7 @@ $i = 1;
 while ($row = $result->fetch_assoc()) {
     echo '  
     <figure class="gallery__item__'.strval($i).'">
-    <img src=".' . $row['Image'] . '" alt="Comfortable Apartment" class="gallery__img" style="width:500px;height:500px;  object-fit: cover;"" >
+    <img src=".' . $row['Image'] . '" alt="Comfortable Apartment" class="gallery__img" >
     </figure>';
     $i++;
 }
