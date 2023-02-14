@@ -65,7 +65,7 @@
                 $email_temp = $_POST['email'];
                 $email=filter_var($email_temp, FILTER_SANITIZE_EMAIL);
 
-                if(!filter_var($email, FILTER_VALIDATE_EMAIL)===false)
+                if(filter_var($email, FILTER_VALIDATE_EMAIL)===false)
                 {
                     echo '<script type=text/javascript>';
                     echo 'alert("Email not valid")';
