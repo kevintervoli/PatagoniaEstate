@@ -50,6 +50,8 @@ document.querySelector("#userForm").addEventListener("submit", (event) => {
   if (buttonName === "fillButton") {
     const formData = new FormData(event.target);
     const data = Object.fromEntries(formData.entries());
+    // clr table
+    document.querySelector("tbody").innerHTML = "";
     getPropertiesAPI().then((data) => {
       fillTable(document.querySelector("tbody"), data);
     });
