@@ -36,13 +36,6 @@ for (let i = 0; i < navElemArr.length; i++) {
     elemToggleFunc(overlay);
   });
 }
-
-
-
-/**
- * header active state
- */
-
 const header = document.querySelector("[data-header]");
 
 window.addEventListener("scroll", function () {

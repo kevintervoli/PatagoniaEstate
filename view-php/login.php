@@ -49,9 +49,6 @@ error_reporting(0)
     </div>
 
 <?php
-//database connection
-// include '../PHP/authenticate_user.php';
-// include '../PHP/connect_to_database.php';
 include '../PHP/PDO_conn.php';
 ?>
 </body>
