@@ -1,0 +1,2 @@
+On this project on the topic of WEB TECHNOLOGIES AND PROGRAMMING we created a real estate website.
+-First in the main page we have created a navbar with the nav links HOME , ABOUT , SERVICE , PROPERTY 

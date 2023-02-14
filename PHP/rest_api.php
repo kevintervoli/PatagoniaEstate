@@ -19,14 +19,6 @@
         $row = $stmt->fetchAll(PDO::FETCH_ASSOC);
         return $row;
     }
-    public function search($id , $username){
-        $stmt = $this->connection->prepare("select * from users where ID = :id or username = :username");
-        $stmt->execute(
-            [':id'=>$id, ':username'=>$username]
-        );
-        $row = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        return $row;
-    }
     public function update($id,$name,$surname,$age,$email,$address,$username, $password, $status){
         $stmt = $this->connection->prepare("update users set name=:name,surname=:surname,age=:age,email=:email,address=:address,username=:username, password=:password, status=:status where id=:id");
         $stmt->execute(

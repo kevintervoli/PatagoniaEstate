@@ -90,7 +90,7 @@
                     echo 'alert("Age not valid")';
                     echo '</script>';
                 }
-
+                $password = password_hash($password, PASSWORD_DEFAULT);
                 $db->insert($name, $surname,$age, $email, $address, $username, $password,1);
             }
             ?>

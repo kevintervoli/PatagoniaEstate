@@ -107,9 +107,7 @@
             <p class="hero-text">
               Find the best house for yourself or for your family !
             </p>
-
-            <button class="btn">Make An Enquiry</button>
-
+            <a class="btn" href="#contact">Make An Enquiry</a>
           </div>
 
           <figure class="hero-banner">
