@@ -37,6 +37,7 @@
         <input type="text" name="password" placeholder="Password"/>
         <input type="number" name="status" placeholder="Status"pattern = "^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"/>
         <input class='btn btn-primary btn-sm' type='submit' name='edit' value='EDIT' />
+        <a  class='btn btn-primary btn-sm' href="../index.php">GO HOME</a>
         <br>
         <br>
     </form>
