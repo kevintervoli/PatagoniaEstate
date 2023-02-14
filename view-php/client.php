@@ -11,8 +11,7 @@
     <h1>Client Page</h1>
     Click here to <a href="../PHP/logout.php">Logout</a>
     <div class="gallery">
-        
-    <?php include '../PHP/loadClient.php';?>
+    <!-- <?php include '../PHP/loadClient.php';?> -->
     </div>
 </body>
 </html>
