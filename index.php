@@ -2,11 +2,6 @@
 <html lang="en">
   <?php
   // check if user is logged in by checking their username and then redirect
-  session_start();
-
-  if(isset($_SESSION['username'])){
-    header('Location: ../index.php');
-  }
   ?>
 <head>
   <meta charset="UTF-8">
