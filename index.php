@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+  <?php
+  // check if user is logged in by checking their username and then redirect
+  session_start();
 
+  if(isset($_SESSION['username'])){
+    header('Location: ../index.php');
+  }
+  ?>
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -70,9 +77,8 @@
           </div>
 
         </nav>
-
         <div class="header-bottom-actions">
-          <button class="header-bottom-actions-btn" id="clickButton" aria-label="Profile">
+          <button class="header-bottom-actions-btn" type="submit" id="clickButton" aria-label="Profile">
             <ion-icon name="person-outline"></ion-icon>
             <span>Profile</span>
           </button>
