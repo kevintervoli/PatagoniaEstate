@@ -4,4 +4,4 @@ RewriteBase /
 RewriteRule ^(PHP|PDF|Database|assets|API|view-php)/?$ - [F]
 
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(.*)$ PatagoniaEstate/index.php?/$1 [L]
+RewriteRule ^(.*)$ PatagoniaEstate/index.php [L]
