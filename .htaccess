@@ -3,5 +3,8 @@ RewriteBase /
 
 RewriteRule ^(PHP|PDF|Database|assets|API|view-php)/?$ - [F]
 
+RewriteRule ^property/([0-9]+)/?$ PatagoniaEstate/PHP/properties.php?id=$1 [L]
+
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(.*)$ PatagoniaEstate/index.php [L]
+RewriteRule ^(.*)$ PatagoniaEstate/index.php/$1
+
