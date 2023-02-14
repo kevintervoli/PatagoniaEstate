@@ -38,7 +38,6 @@ function fillTable(tableElement, data) {
             <td>${property.username}</td>
             <td>${property.Password}</td>
             <td>${property.Status}</td>
-
         `;
     tableElement.appendChild(row);
   });
@@ -46,12 +45,11 @@ function fillTable(tableElement, data) {
 
 document.querySelector("#userForm").addEventListener("submit", (event) => {
   event.preventDefault();
+  // get the button name from event
   const buttonName = event.submitter.name;
   if (buttonName === "fillButton") {
     const formData = new FormData(event.target);
     const data = Object.fromEntries(formData.entries());
-    // clr table
-    document.querySelector("tbody").innerHTML = "";
     getPropertiesAPI().then((data) => {
       fillTable(document.querySelector("tbody"), data);
     });

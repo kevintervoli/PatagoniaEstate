@@ -1,3 +1,4 @@
+Create database real_estate;
 CREATE TABLE users
 (
   ID INT NOT NULL auto_increment,
