@@ -32,6 +32,7 @@ try{
         
         session_start();
         $_SESSION['username'] = $username;
+        $_SESSION['Status']=$row['Status'];
         header("Location: ../view-php/client.php");
     }
 

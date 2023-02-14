@@ -2,7 +2,11 @@
 // check if user is logged in by checking if session variable is set
 session_start();
 if(isset($_SESSION['username'])){
-    header('Location: ../index.php');
+
+    if($_SESSION['Status']==0)
+        header('Location: ../view-php/admin.php');
+    else if($_SESSION['Status']==1 || $_SESSION['Status']==2)
+        header('Location: ../view-php/client.php');
 }
 
 error_reporting(0)
