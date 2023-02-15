@@ -76,8 +76,8 @@
             $address = $_POST['address'];
             $username = $_POST['username'];
             $password = $_POST['password'];
-            $confirm_password = $_POST['confirm_password'];
             $status = $_POST['status'];
+            $password = password_hash($password, PASSWORD_DEFAULT);
             $db->insert($name, $surname, $age, $email, $address, $username, $password, $status);
         }
     ?>

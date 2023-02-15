@@ -12,13 +12,13 @@ async function getPropertiesAPI(data) {
 }
 // delete property
 async function deletePropertyAPI(data) {
-    return fetch("http://localhost/PatagoniaEstate/API/users", {
+  let url = "http://localhost/PatagoniaEstate/API/users?id=" + data['id'] + "&username=" + data['username'];
+    return fetch(url, {
         method: "DELETE",
         headers: {
-            Accept: "application/json",
-            "Content-Type": "application/json",
+          'Content-type': 'application/json; charset=UTF-8'
         },
-        body: JSON.stringify(data),
+        
     }).then((response) => {
         return response.json();
     });
@@ -50,6 +50,8 @@ document.querySelector("#userForm").addEventListener("submit", (event) => {
   if (buttonName === "fillButton") {
     const formData = new FormData(event.target);
     const data = Object.fromEntries(formData.entries());
+    // clear the table
+    document.querySelector("tbody").innerHTML = "";
     getPropertiesAPI().then((data) => {
       fillTable(document.querySelector("tbody"), data);
     });

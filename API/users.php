@@ -10,7 +10,7 @@
                 break;
             case 'DELETE':
                 $db = new Database();
-                $db->delete( $_GET['ID'] , $_GET['username']);
+                $db->delete( $_GET['id'] , $_GET['username']);
                 header('HTTP/1.1 200 OK');
                 echo json_encode("User deleted successfully");
                 break;
