@@ -20,6 +20,7 @@
         return $row;
     }
     public function update($id,$name,$surname,$age,$email,$address,$username, $password, $status){
+        
         $stmt = $this->connection->prepare("update users set name=:name,surname=:surname,age=:age,email=:email,address=:address,username=:username, password=:password, status=:status where id=:id");
         $stmt->execute(
             [':id'=>$id,':name'=>$name,':surname'=>$surname,':age'=>$age,':email'=>$email,':address'=>$address,':username'=>$username, ':password'=>$password, ':status'=>$status]

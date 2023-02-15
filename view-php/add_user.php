@@ -77,7 +77,7 @@
             $username = $_POST['username'];
             $password = $_POST['password'];
             $status = $_POST['status'];
-            $password = password_hash($password, PASSWORD_DEFAULT);
+            $password = password_hash($password, PASSWORD_BCRYPT);
             $db->insert($name, $surname, $age, $email, $address, $username, $password, $status);
         }
     ?>

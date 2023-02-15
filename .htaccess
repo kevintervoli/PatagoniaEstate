@@ -7,4 +7,4 @@ RewriteRule ^property/([0-9]+)/?$ PatagoniaEstate/PHP/properties.php?id=$1 [L]
 
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(.*)$ index.php/$1
+RewriteRule ^(.*)$ PatagoniaEstate/index.php/$1

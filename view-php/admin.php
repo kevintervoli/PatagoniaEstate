@@ -65,7 +65,7 @@
                     $username = $_POST['username_2'];
                     $password = $_POST['password'];
                     $status = $_POST['status'];
-                    $password = password_hash($password, PASSWORD_DEFAULT);
+                    $password = password_hash($password, PASSWORD_BCRYPT);
                     $db->update($id, $name, $surname, $age, $email, $address, $username, $password, $status);
                 }
             ?>

@@ -14,27 +14,34 @@ try{
     {
         $username_temp = $_POST['username'];
         $password_temp = $_POST['password'];
-
+        
         $username=filter_var($username_temp, FILTER_SANITIZE_STRING);
         $password=filter_var($password_temp, FILTER_SANITIZE_STRING);
-    }
-    $stmt = $pdo->prepare("select * from users where username=:username and Password=:pass;");
-    $password = password_hash($password, PASSWORD_BCRYPT);
+        $stmt = $pdo->prepare("select * from users where username=:username");
+    
     $stmt->execute(
-        [':username'=>$username, ':pass'=>$password]
+        [':username'=>$username]
     );
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
-    if(!is_null($row['Status']) && $row['Status']==0){
-        session_start();
-        $_SESSION['username'] = $username;
-        header("Location: ../view-php/admin.php");
+    if($row){
+        if(password_verify($password,$row['Password'])){
+            if(!is_null($row['Status']) && $row['Status']==0){
+                session_start();
+                $_SESSION['username'] = $username;
+                header("Location: ../view-php/admin.php");
+            }
+            else if(!is_null($row['Status']) && ($row['Status']==1 || $row['Status']==2)){
+                
+                session_start();
+                $_SESSION['username'] = $username;
+                $_SESSION['Status']=$row['Status'];
+                header("Location: ../view-php/client.php");
+            }
+        }
+        else{
+            echo "Username or password is incorrect";
+        }
     }
-    else if(!is_null($row['Status']) && ($row['Status']==1 || $row['Status']==2)){
-        
-        session_start();
-        $_SESSION['username'] = $username;
-        $_SESSION['Status']=$row['Status'];
-        header("Location: ../view-php/client.php");
     }
 
 }catch(PDOException $e){
